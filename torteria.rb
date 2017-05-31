@@ -14,12 +14,33 @@ class Torteria
   end
 
   def coccion(tipo_torta)
- 
+    
   end
 
   # crudo, casi listo, listo y quemado.
   def horneado
-    
+    p @charola
+    #charola_final = []
+
+    @charola.each do |torta|
+      #p torta
+      coccion(torta)
+      #p @listo
+      if @tiempo == @listo
+        #charola_final << "Torta de #{torta}: lista¡"
+        p "Torta de #{torta}: lista¡"
+      elsif @tiempo > @listo
+        #charola_final << "Torta de #{torta}: quemada¡¡"
+        p "Torta de #{torta}: quemada¡¡"
+      elsif @tiempo > (@listo - 2) && @tiempo < @listo
+        #charola_final << "Torta de #{torta}: casi lista¡"
+        p "Torta de #{torta}: casi lista¡"
+      else
+        #charola_final << "Torta de #{torta}: cruda¡"
+        p "Torta de #{torta}: cruda¡"
+      end
+    end
+    #p charola_final
   end
 
 end
