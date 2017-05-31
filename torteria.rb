@@ -14,7 +14,13 @@ class Torteria
   end
 
   def coccion(tipo_torta)
- 
+    if tipo_torta == "queso"
+      @listo = 5
+    elsif tipo_torta == "salchicha"
+      @listo = 7
+    elsif tipo_torta == "milanesa"
+      @listo = 10      
+    end
   end
 
   # crudo, casi listo, listo y quemado.
